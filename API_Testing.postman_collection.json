@@ -153,7 +153,11 @@
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
-											"});"
+											"});",
+											"",
+											"var jsonData = pm.response.json();",
+											"console.log(jsonData.lists)",
+											"jsonData.lists.forEach(list => console.log(list.id))"
 										],
 										"type": "text/javascript",
 										"packages": {}
@@ -189,13 +193,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{url}}/folder/90156748914/list",
+									"raw": "{{url}}/folder/{{folder_id}}/list",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
 										"folder",
-										"90156748914",
+										"{{folder_id}}",
 										"list"
 									],
 									"query": [
@@ -679,7 +683,29 @@
 											"",
 											"var jsonData = pm.response.json();",
 											"var list_id = jsonData.id",
-											"pm.environment.set(\"list_id\", list_id);"
+											"pm.environment.set(\"list_id\", list_id);",
+											"",
+											"const Ajv = require('ajv');",
+											"const ajv = new Ajv();",
+											"",
+											"const schema = {",
+											"   type: \"object\",",
+											"    properties: {",
+											"        \"id\": {type: \"string\"},",
+											"        \"name\": {type: \"string\"},",
+											"        \"content\": {type: \"string\"}",
+											"    },",
+											"    required: [\"id\", \"name\"]",
+											"};",
+											"",
+											"const validate = ajv.compile(schema);",
+											"const response = pm.response.json();",
+											"",
+											"",
+											"pm.test(\"Schema is valid\", function () {",
+											"   const valid = validate(response);",
+											"   pm.expect(valid, JSON.stringify(validate.errors)).to.be.true;",
+											"});"
 										],
 										"type": "text/javascript",
 										"packages": {}
@@ -741,6 +767,77 @@
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"const Ajv = require('ajv');",
+											"const ajv = new Ajv();",
+											"",
+											"const schema = {",
+											"   type: \"object\",",
+											"    properties: {",
+											"        \"id\": {type: \"string\"},",
+											"        \"name\": {type: \"string\"},",
+											"        \"content\": {type: \"string\"}",
+											"    },",
+											"    required: [\"id\", \"name\"]",
+											"};",
+											"",
+											"const validate = ajv.compile(schema);",
+											"const response = pm.response.json();",
+											"",
+											"",
+											"pm.test(\"Schema is valid\", function () {",
+											"   const valid = validate(response);",
+											"   pm.expect(valid, JSON.stringify(validate.errors)).to.be.true;",
+											"});",
+											"",
+											"var res = pm.sendRequest({",
+											"    url: \"https://api.clickup.com/api/v2/list/901511060637\",",
+											"    header:{",
+											"        \"Authorization\": pm.environment.get(\"my_token\")",
+											"    },",
+											"    method: \"DELETE\",",
+											"    function (err, res) {",
+											"        if (err) {",
+											"            console.error(\"Request failed:\", err);",
+											"        } else {",
+											"            var jsonData = res.json();",
+											"            console.log(jsonData);",
+											"        }",
+											"    }",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"var res = pm.sendRequest({",
+											"    url: \"https://api.clickup.com/api/v2/folder/90156748914/list\",",
+											"    header:{",
+											"        \"Content-Type\": \"application/json\",",
+											"        \"Authorization\": pm.environment.get(\"my_token\")",
+											"    },",
+											"    method: \"POST\",",
+											"    body: {",
+											"        mode: 'raw',",
+											"        raw: JSON.stringify({",
+											"            name: pm.variables.replaceIn(\"{{$randomFirstName}}\");",
+											"        })",
+											"    }, ",
+											"    function (err, res) {",
+											"        if (err) {",
+											"            console.error(\"Request failed:\", err);",
+											"        } else {",
+											"            var jsonData = res.json();",
+											"            var list_id = jsonData.id;",
+											"            pm.environment.set(\"list_id\", list_id);",
+											"            pm.setNextRequest(\"Get List by ID\");",
+											"        }",
+											"    }",
 											"});"
 										],
 										"type": "text/javascript",
@@ -968,7 +1065,47 @@
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
-											"});"
+											"});",
+											"",
+											"pm.test(\"The list name is updated\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    var expectedName = pm.collectionVariables.get('listName')",
+											"    pm.expect(jsonData.name).to.eql(expectedName);",
+											"});",
+											"",
+											"const Ajv = require('ajv');",
+											"const ajv = new Ajv();",
+											"",
+											"const schema = {",
+											"   type: \"object\",",
+											"    properties: {",
+											"        \"id\": {type: \"string\"},",
+											"        \"name\": {type: \"string\"},",
+											"        \"content\": {type: \"string\"}",
+											"    },",
+											"    required: [\"id\", \"name\"]",
+											"};",
+											"",
+											"const validate = ajv.compile(schema);",
+											"const response = pm.response.json();",
+											"",
+											"",
+											"pm.test(\"Schema is valid\", function () {",
+											"   const valid = validate(response);",
+											"   pm.expect(valid, JSON.stringify(validate.errors)).to.be.true;",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"var name = pm.variables.replaceIn('{{$randomCity}}')",
+											"pm.collectionVariables.set(\"listName\", name);"
 										],
 										"type": "text/javascript",
 										"packages": {}
@@ -1000,7 +1137,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"name\": \"{{$randomCity}}\"\n}",
+									"raw": "{\n    \"name\": \"{{listName}}\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1415,6 +1552,12 @@
 					]
 				}
 			]
+		}
+	],
+	"variable": [
+		{
+			"key": "listName",
+			"value": ""
 		}
 	]
 }
