@@ -1,0 +1,368 @@
+{
+    "lists": [
+        {
+            "id": "901510906794",
+            "name": "Garfield",
+            "orderindex": 0,
+            "content": "my new list content",
+            "status": null,
+            "priority": null,
+            "assignee": null,
+            "task_count": 0,
+            "due_date": null,
+            "start_date": null,
+            "folder": {
+                "id": "90156748914",
+                "name": "Projects",
+                "hidden": false,
+                "access": true
+            },
+            "space": {
+                "id": "90154465650",
+                "name": "Team Space",
+                "access": true
+            },
+            "archived": false,
+            "override_statuses": false,
+            "permission_level": "create"
+        },
+        {
+            "id": "901510907985",
+            "name": "General",
+            "orderindex": 1,
+            "content": "my new list content",
+            "status": null,
+            "priority": null,
+            "assignee": null,
+            "task_count": 0,
+            "due_date": null,
+            "start_date": null,
+            "folder": {
+                "id": "90156748914",
+                "name": "Projects",
+                "hidden": false,
+                "access": true
+            },
+            "space": {
+                "id": "90154465650",
+                "name": "Team Space",
+                "access": true
+            },
+            "archived": false,
+            "override_statuses": false,
+            "permission_level": "create"
+        },
+        {
+            "id": "901511310807",
+            "name": "randomFirstName66",
+            "orderindex": 44,
+            "content": "my new list content",
+            "status": null,
+            "priority": null,
+            "assignee": null,
+            "task_count": 0,
+            "due_date": null,
+            "start_date": null,
+            "folder": {
+                "id": "90156748914",
+                "name": "Projects",
+                "hidden": false,
+                "access": true
+            },
+            "space": {
+                "id": "90154465650",
+                "name": "Team Space",
+                "access": true
+            },
+            "archived": false,
+            "override_statuses": false,
+            "permission_level": "create"
+        },
+        {
+            "id": "901511312152",
+            "name": "${_RandomString(8,abcdefghijklmnopqrstuvwxyz)",
+            "orderindex": 45,
+            "content": "my new list content",
+            "status": null,
+            "priority": null,
+            "assignee": null,
+            "task_count": 0,
+            "due_date": null,
+            "start_date": null,
+            "folder": {
+                "id": "90156748914",
+                "name": "Projects",
+                "hidden": false,
+                "access": true
+            },
+            "space": {
+                "id": "90154465650",
+                "name": "Team Space",
+                "access": true
+            },
+            "archived": false,
+            "override_statuses": false,
+            "permission_level": "create"
+        },
+        {
+            "id": "901511312169",
+            "name": "${_RandomString(8,abcdefghijklmnopqrstuvwxyz)}",
+            "orderindex": 46,
+            "content": "my new list content",
+            "status": null,
+            "priority": null,
+            "assignee": null,
+            "task_count": 0,
+            "due_date": null,
+            "start_date": null,
+            "folder": {
+                "id": "90156748914",
+                "name": "Projects",
+                "hidden": false,
+                "access": true
+            },
+            "space": {
+                "id": "90154465650",
+                "name": "Team Space",
+                "access": true
+            },
+            "archived": false,
+            "override_statuses": false,
+            "permission_level": "create"
+        },
+        {
+            "id": "901511312192",
+            "name": "${_RandomString(8, abcdefghijklmnopqrstuvwxyz)}",
+            "orderindex": 47,
+            "content": "my new list content",
+            "status": null,
+            "priority": null,
+            "assignee": null,
+            "task_count": 0,
+            "due_date": null,
+            "start_date": null,
+            "folder": {
+                "id": "90156748914",
+                "name": "Projects",
+                "hidden": false,
+                "access": true
+            },
+            "space": {
+                "id": "90154465650",
+                "name": "Team Space",
+                "access": true
+            },
+            "archived": false,
+            "override_statuses": false,
+            "permission_level": "create"
+        },
+        {
+            "id": "901511312227",
+            "name": "ubjtuvaa",
+            "orderindex": 48,
+            "content": "my new list content",
+            "status": null,
+            "priority": null,
+            "assignee": null,
+            "task_count": 0,
+            "due_date": null,
+            "start_date": null,
+            "folder": {
+                "id": "90156748914",
+                "name": "Projects",
+                "hidden": false,
+                "access": true
+            },
+            "space": {
+                "id": "90154465650",
+                "name": "Team Space",
+                "access": true
+            },
+            "archived": false,
+            "override_statuses": false,
+            "permission_level": "create"
+        },
+        {
+            "id": "901511312851",
+            "name": "fvompxlp",
+            "orderindex": 49,
+            "content": "my new list content",
+            "status": null,
+            "priority": null,
+            "assignee": null,
+            "task_count": 0,
+            "due_date": null,
+            "start_date": null,
+            "folder": {
+                "id": "90156748914",
+                "name": "Projects",
+                "hidden": false,
+                "access": true
+            },
+            "space": {
+                "id": "90154465650",
+                "name": "Team Space",
+                "access": true
+            },
+            "archived": false,
+            "override_statuses": false,
+            "permission_level": "create"
+        },
+        {
+            "id": "901511327095",
+            "name": "hello world",
+            "orderindex": 50,
+            "content": "my new list content",
+            "status": null,
+            "priority": null,
+            "assignee": null,
+            "task_count": 0,
+            "due_date": null,
+            "start_date": null,
+            "folder": {
+                "id": "90156748914",
+                "name": "Projects",
+                "hidden": false,
+                "access": true
+            },
+            "space": {
+                "id": "90154465650",
+                "name": "Team Space",
+                "access": true
+            },
+            "archived": false,
+            "override_statuses": false,
+            "permission_level": "create"
+        },
+        {
+            "id": "901511330759",
+            "name": "hello world all",
+            "orderindex": 51,
+            "content": "my new list content",
+            "status": null,
+            "priority": null,
+            "assignee": null,
+            "task_count": 0,
+            "due_date": null,
+            "start_date": null,
+            "folder": {
+                "id": "90156748914",
+                "name": "Projects",
+                "hidden": false,
+                "access": true
+            },
+            "space": {
+                "id": "90154465650",
+                "name": "Team Space",
+                "access": true
+            },
+            "archived": false,
+            "override_statuses": false,
+            "permission_level": "create"
+        },
+        {
+            "id": "901511330808",
+            "name": "hello world alls",
+            "orderindex": 52,
+            "content": "my new list content",
+            "status": null,
+            "priority": null,
+            "assignee": null,
+            "task_count": 0,
+            "due_date": null,
+            "start_date": null,
+            "folder": {
+                "id": "90156748914",
+                "name": "Projects",
+                "hidden": false,
+                "access": true
+            },
+            "space": {
+                "id": "90154465650",
+                "name": "Team Space",
+                "access": true
+            },
+            "archived": false,
+            "override_statuses": false,
+            "permission_level": "create"
+        },
+        {
+            "id": "901511331529",
+            "name": "QCpEnbkwGxXG",
+            "orderindex": 53,
+            "content": "my new list content",
+            "status": null,
+            "priority": null,
+            "assignee": null,
+            "task_count": 0,
+            "due_date": null,
+            "start_date": null,
+            "folder": {
+                "id": "90156748914",
+                "name": "Projects",
+                "hidden": false,
+                "access": true
+            },
+            "space": {
+                "id": "90154465650",
+                "name": "Team Space",
+                "access": true
+            },
+            "archived": false,
+            "override_statuses": false,
+            "permission_level": "create"
+        },
+        {
+            "id": "901511331599",
+            "name": "eaiqSSXtGZdq",
+            "orderindex": 54,
+            "content": "my new list content",
+            "status": null,
+            "priority": null,
+            "assignee": null,
+            "task_count": 0,
+            "due_date": null,
+            "start_date": null,
+            "folder": {
+                "id": "90156748914",
+                "name": "Projects",
+                "hidden": false,
+                "access": true
+            },
+            "space": {
+                "id": "90154465650",
+                "name": "Team Space",
+                "access": true
+            },
+            "archived": false,
+            "override_statuses": false,
+            "permission_level": "create"
+        },
+        {
+            "id": "901511331634",
+            "name": "PXwGejMwIifW",
+            "orderindex": 55,
+            "content": "my new list content",
+            "status": null,
+            "priority": null,
+            "assignee": null,
+            "task_count": 0,
+            "due_date": null,
+            "start_date": null,
+            "folder": {
+                "id": "90156748914",
+                "name": "Projects",
+                "hidden": false,
+                "access": true
+            },
+            "space": {
+                "id": "90154465650",
+                "name": "Team Space",
+                "access": true
+            },
+            "archived": false,
+            "override_statuses": false,
+            "permission_level": "create"
+        }
+    ]
+}
