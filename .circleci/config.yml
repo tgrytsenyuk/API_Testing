@@ -10,6 +10,9 @@ jobs:
           name: Install Newman
           command: npm install newman
       - run:
+          name: Install HTML reporter (local)
+          command: npm install newman-reporter-html
+      - run:
           name: Run Postman collection
           command: |
             npx newman run tests/API_Testing.postman_collection.json \
