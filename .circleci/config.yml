@@ -8,14 +8,14 @@ jobs:
       - checkout
       - run:
           name: Install Newman
-          command: npm install -g newman
+          command: npm install newman
       - run:
           name: Run Postman collection
-          command: >
-            newman run tests/collection.json
-            --environment tests/environment.json
-            --reporters cli,html
-            --reporter-html-export newman-report.html
+          command: |
+            npx newman run tests/API_Testing.postman_collection.json \
+              --environment tests/API_Testing.postman_environment.json \
+              --reporters cli,html \
+              --reporter-html-export newman-report.html
       - store_artifacts:
           path: newman-report.html
           destination: postman-report
