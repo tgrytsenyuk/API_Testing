@@ -10,8 +10,8 @@ jobs:
           name: Install Newman
           command: npm install newman
       - run:
-          name: Install HTML reporter (local)
-          command: npm install newman-reporter-html
+          name: Install HTML Reporter
+          command: npm install newman-reporter-html --legacy-peer-deps
       - run:
           name: Run Postman collection
           command: |
